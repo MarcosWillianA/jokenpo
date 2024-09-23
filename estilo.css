@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, main, footer {
+    min-width: 320px;
+    padding: 5px 10px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* contador */ 
+
+#contador {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+fieldset {
+    border: 1px solid orangered;
+}
+
+label {
+    font-size: 18px;
+}
+
+.contador {
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* Campo de jogo */
+
+#jogo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid blue;
+    height: 200px;
+}
+
+.imagemJogo {
+    width: 100px;
+    height: 89px;
+    flex-shrink: 2;
+    border: 1px solid aqua;
+}
+
+#npc {
+    transform: scaleX(-1);
+}
+
+/* Botões de escolha */ 
+
+#escolha {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+
+.botaoEscolha {
+    width: 90px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Botão de reset */
+
+#reset {
+    padding: 10px;
+    border: 1px solid violet;
+}
+
+#resetar {
+    display: block;
+    margin: auto;
+    width: 50%;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 10px;
+}

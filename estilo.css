@@ -10,7 +10,9 @@ body {
 
 header, main, footer {
     min-width: 320px;
+    max-width: 640px;
     padding: 5px 10px;
+    margin: auto;
 }
 
 h1 {
@@ -37,12 +39,16 @@ label {
     font-size: 18px;
 }
 
-.contador {
+.contagem {
     width: 35px;
     height: 35px;
     display: block;
     margin: auto;
     text-align: center;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
 }
 
 /* Campo de jogo */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel e Tesoura</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Pedra Papel e Tesoura</h1>
+    </header>
+    <main>
+        <div id="contador">
+            <label for="vitorias">Vitórias</label>
+            <input type="number" name="vitorias" id="vitorias">
+            <label for="empates">Empates</label>
+            <input type="number" name="empates" id="empates">
+            <label for="derrotas">Derrotas</label>
+            <input type="number" name="derrotas" id="derrotas">
+        </div>
+        <div id="jogo">
+            <img src="img/pedra.png" alt="Pedra">
+            <img src="img/papel.png" alt="Papel">
+        </div>
+        <div id="escolha">
+            <button id="pedra" class="botaoEscolha">Pedra</button>
+            <button id="papel" class="botaoEscolha">Papel</button>
+            <button id="tesoura" class="botaoEscolha">Tesoura</button>
+        </div>
+        <div id="reset">
+            <button id="resetar">Resetar</button>
+        </div>
+    </main>
+    <footer>
+        <p>Jogo criado por Marcos Willian</p>
+    </footer>
+
+    <script src="jokenpo.js"></script>
+</body>
+</html>

@@ -1,10 +1,16 @@
 function iniciarJogo () {
     document.getElementById('startJogo').style.display = 'none';
     document.getElementById('telaDeJogo').style.display = 'block'
+    document.getElementById('jogoParado').style.display = 'flex'    
 }
 
+function escolherMao(mao) {
+    //Ao apertar o botão, a primeira tela inicial de jogo é desativada
+    document.getElementById('jogoParado').style.display = 'none';
+    //Ativa a segunda tela, onde ocorre a animação de encontro
+    const jogoAcontecendo = document.getElementById('jogoAcontecendo');
+    jogoAcontecendo.style.display = 'flex';
 
-function escolherMao(mao) {    
     const maoJogador = mao;
     const opcoes = ['pedra', 'papel', 'tesoura'];
     const aleatorio = parseInt(Math.random() * 3);
@@ -13,7 +19,8 @@ function escolherMao(mao) {
     const vitorias = document.querySelector('#vitorias');
     const empates = document.querySelector('#empates');
     const derrotas = document.querySelector('#derrotas'); 
-
+    
+    
     switch (maoJogador) {
         case 'pedra':
         document.getElementById('playerResultado').src = 'img/pedra.png';
@@ -44,14 +51,17 @@ function escolherMao(mao) {
 
     switch (true) {
         case maoJogador === maoEscolhida:
+        document.getElementById('vitorias').style.animation = 'piscar 2s linear';
         empates.value ++;
         break;
 
         case maoJogador === 'pedra' && maoEscolhida === 'tesoura' || maoJogador === 'papel' && maoEscolhida === 'pedra' || maoJogador === 'tesoura' && maoEscolhida === 'papel': 
+        document.getElementById('empates').style.animation = 'piscar 2s linear';
         vitorias.value ++;
         break; 
 
         case maoJogador === 'pedra' && maoEscolhida === 'papel' || maoJogador === 'papel' && maoEscolhida === 'tesoura' || maoJogador === 'tesoura' && maoEscolhida === 'pedra':
+        document.getElementById('derrotas').style.animation = 'piscar 2s linear';
         derrotas.value ++;
         break;
     }
@@ -69,6 +79,6 @@ function reset() {
 }
 
 
-console.log(escolherMao());
+//console.log(escolherMao());
 
 

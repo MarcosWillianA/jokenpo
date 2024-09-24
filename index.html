@@ -16,13 +16,13 @@
             <div id="containerTexto">
                 <h2>Como jogar:</h2>
                 <p>
-                    <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i> vence <i class="fa-solid fa-hand-scissors"></i>
+                    Pedra <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i> vence tesoura <i class="fa-solid fa-hand-scissors"></i>
                 </p>
                 <p>
-                    <i class="fa-solid fa-hand-scissors fa-flip-horizontal"></i> vence <i class="fa-solid fa-hand fa-flip-horizontal"></i>
+                   Tesoura <i class="fa-solid fa-hand-scissors fa-flip-horizontal"></i> vence papel<i class="fa-solid fa-hand fa-flip-horizontal"></i>
                 </p>
                 <p>
-                    <i class="fa-solid fa-hand fa-flip-horizontal"></i> vence <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i>
+                   Papel <i class="fa-solid fa-hand fa-flip-horizontal"></i> vence pedra <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i>
                 </p>
                 <button id="playGame" onclick="iniciarJogo()">jogar</button>
             </div>
@@ -57,9 +57,9 @@
                 <img src="img/pedra.png" id="npcResultado" alt="NPC" class="imagemJogoResultado">
             </div>
             <div id="escolha">
-                <button id="pedra" class="botaoEscolha" onclick="escolherMao('pedra')"><img src="img/pedra.png" alt="Pedra" width="80"></button>
-                <button id="papel" class="botaoEscolha" onclick="escolherMao('papel')"><img src="img/papel.png" alt="Papel" width="80" ></button>
-                <button id="tesoura" class="botaoEscolha" onclick="escolherMao('tesoura')"><img src="img/tesoura.png" alt="Tesoura" width="80"></button>
+                <button id="pedra" class="botaoEscolha" onclick="setTimeout(escolherMao('pedra'), 2000)"><img src="img/pedra.png" alt="Pedra" width="80"></button>
+                <button id="papel" class="botaoEscolha" onclick="setTimeout(escolherMao('papel'), 2000)"><img src="img/papel.png" alt="Papel" width="80" ></button>
+                <button id="tesoura" class="botaoEscolha" onclick="setTimeout(escolherMao('tesoura'), 2000)"><img src="img/tesoura.png" alt="Tesoura" width="80"></button>
             </div>
             <div id="reset">
                 <button id="resetar" onclick="reset()">Resetar</button>

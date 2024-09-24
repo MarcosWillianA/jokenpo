@@ -23,7 +23,7 @@ h1 {
 /* startGame */ 
 
 #startJogo {
-    display: none;
+    display: block;
 }
 
 #containerTexto {
@@ -31,9 +31,7 @@ h1 {
     width: 100%;
     margin: 25px auto;
     padding: 20px;
-    
 }
-
 
 #startJogo h2 {
     font-size: 18px;
@@ -75,7 +73,7 @@ h1 {
 /* telaDeJogo */
 
 #telaDeJogo {
-    display: block;
+    display: none;
 }
 
 /* contador */ 
@@ -103,7 +101,7 @@ label {
     display: block;
     margin: auto;
     text-align: center;
-    animation: piscar 2s;
+    /*animation: piscar 2s ease; */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -136,8 +134,8 @@ label {
     height: 200px;
 }
 
-/*#jogoAcontecendo {
-    display: flex;
+#jogoAcontecendo {
+    display: none;
     justify-content: space-around;
     align-items: center;
     border: 1px solid orange;
@@ -145,12 +143,12 @@ label {
 }
 
 #jogoResultado {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     border: 1px solid limegreen;
     height: 200px;
-}*/
+}
 
 .imagemJogo {
     width: 100px;
@@ -226,6 +224,10 @@ label {
     background-color: white;
 }
 
+.botaoEscolha:active {
+    box-shadow: 0 0 15px purple, 0 0 30px purple;
+}
+
 /* Botão de reset */
 
 #reset {
@@ -246,7 +248,8 @@ label {
 }
 
 #resetar:active {
-    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.7);
+    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.9);
+    transform: scale(0.95);
 }
 
 footer p {

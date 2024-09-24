@@ -1,3 +1,9 @@
+function iniciarJogo () {
+    document.getElementById('startJogo').style.display = 'none';
+    document.getElementById('telaDeJogo').style.display = 'block'
+}
+
+
 function escolherMao(mao) {    
     const maoJogador = mao;
     const opcoes = ['pedra', 'papel', 'tesoura'];
@@ -8,17 +14,31 @@ function escolherMao(mao) {
     const empates = document.querySelector('#empates');
     const derrotas = document.querySelector('#derrotas'); 
 
-    switch (maoJogador, maoEscolhida) {
+    switch (maoJogador) {
         case 'pedra':
-        document.getElementById('npc').src = 'img/pedra.png';
+        document.getElementById('playerResultado').src = 'img/pedra.png';
         break;
 
         case 'papel':
-        document.getElementById('npc').src = 'img/papel.png';
+        document.getElementById('playerResultado').src = 'img/papel.png';
         break;
 
         case 'tesoura':
-        document.getElementById('npc').src = 'img/tesoura.png';
+        document.getElementById('playerResultado').src = 'img/tesoura.png';
+        break;
+    }
+
+    switch (maoEscolhida) {
+        case 'pedra':
+        document.getElementById('npcResultado').src = 'img/pedra.png';
+        break;
+
+        case 'papel':
+        document.getElementById('npcResultado').src = 'img/papel.png';
+        break;
+
+        case 'tesoura':
+        document.getElementById('npcResultado').src = 'img/tesoura.png';
         break;
     }
 

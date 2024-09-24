@@ -20,6 +20,64 @@ h1 {
     text-align: center;
 }
 
+/* startGame */ 
+
+#startJogo {
+    display: none;
+}
+
+#containerTexto {
+    border: 1px solid red;
+    width: 100%;
+    margin: 25px auto;
+    padding: 20px;
+    
+}
+
+
+#startJogo h2 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#startJogo h3 {
+    font-size: 16px;
+    margin: 10px 0;    
+}
+
+#startJogo p {
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+#playGame {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: auto;
+    transition: box-shadow .5s ease;
+}
+
+#playGame:active {
+    background-color: white;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.7);
+}
+
+/* telaDeJogo */
+
+#telaDeJogo {
+    display: block;
+}
+
 /* contador */ 
 
 #contador {
@@ -45,21 +103,54 @@ label {
     display: block;
     margin: auto;
     text-align: center;
+    animation: piscar 2s;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+    
+}
+
+@keyframes piscar {
+    0% {
+        box-shadow: 0 0 5px gold, 0 0 10px gold;
+    }
+    50% {
+        box-shadow: 0 0 20px gold, 0 0 30px gold;
+    }
+    70% {
+        box-shadow: 0 0 15px gold, 0 0 25px gold; /* Mantém uma sombra mais suave */
+    }
+    100% {
+        box-shadow: none; /* Retorna ao normal */
+    }
 }
 
 /* Campo de jogo */
 
-#jogo {
+#jogoParado, #jogoAcontecendo, #jogoResultado {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 1px solid blue;
     height: 200px;
 }
+
+/*#jogoAcontecendo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid orange;
+    height: 200px;
+}
+
+#jogoResultado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid limegreen;
+    height: 200px;
+}*/
 
 .imagemJogo {
     width: 100px;
@@ -68,7 +159,52 @@ label {
     border: 1px solid aqua;
 }
 
-#npc {
+.imagemJogoMovimento {
+    width: 100px;
+    height: 89px;
+    flex-shrink: 2;
+    border: 1px solid aqua;
+    
+}
+
+.imagemJogoResultado {
+    width: 100px;
+    height: 89px;
+    flex-shrink: 2;
+    border: 1px solid aqua;
+    
+}
+
+#imgPlayerMovimento {
+    animation: jokenpo-esquerdo .5s infinite alternate;
+}
+
+#imgNpcMovimento {
+    animation: jokenpo-direito .5s infinite alternate;
+}
+
+@keyframes jokenpo-esquerdo {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    100%  {
+        transform: rotate(-15deg) translate(-8px, -16px);
+    }
+}
+
+@keyframes jokenpo-direito {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(15deg) translate(8px, -16px);
+    }
+}
+
+
+#npc, #npcResultado {
     transform: scaleX(-1);
 }
 
@@ -106,6 +242,11 @@ label {
     border: none;
     border-radius: 5px;
     padding: 10px;
+    transition: box-shadow .5s ease;
+}
+
+#resetar:active {
+    box-shadow: 0 0 20px 5px rgba(0, 123, 255, 0.7);
 }
 
 footer p {

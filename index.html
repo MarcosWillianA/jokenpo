@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Pedra Papel e Tesoura</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -11,34 +12,59 @@
         <h1>Pedra Papel e Tesoura</h1>
     </header>
     <main>
-        <!-- Contador -->
-        <div id="contador">
-            <fieldset>
-                <label for="vitorias">Vitórias</label>
-                <input type="number" name="vitorias" id="vitorias" class="contagem" value="0" readonly>
-            </fieldset>
-            <fieldset>
-                <label for="empates">Empates</label>
-                <input type="number" name="empates" id="empates" class="contagem" value="0" readonly>
-            </fieldset>
-            <fieldset>
-                <label for="derrotas">Derrotas</label>
-                <input type="number" name="derrotas" id="derrotas" class="contagem" value="0" readonly>
-            </fieldset>
-        </div>
-        <!-- Campo de jogo -->
-        <div id="jogo">
-            <img src="img/pedra.png" id="player" alt="Jogador" class="imagemJogo">
-            <img src="img/pedra.png" id="npc" alt="NPC" class="imagemJogo">
-        </div>
-        <div id="escolha">
-            <button id="pedra" class="botaoEscolha" onclick="escolherMao('pedra')"><img src="img/pedra.png" alt="Pedra" width="80"></button>
-            <button id="papel" class="botaoEscolha" onclick="escolherMao('papel')"><img src="img/papel.png" alt="Papel" width="80" ></button>
-            <button id="tesoura" class="botaoEscolha" onclick="escolherMao('tesoura')"><img src="img/tesoura.png" alt="Tesoura" width="80"></button>
-        </div>
-        <div id="reset">
-            <button id="resetar" onclick="reset()">Resetar</button>
-        </div>
+        <section id="startJogo">
+            <div id="containerTexto">
+                <h2>Como jogar:</h2>
+                <p>
+                    <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i> vence <i class="fa-solid fa-hand-scissors"></i>
+                </p>
+                <p>
+                    <i class="fa-solid fa-hand-scissors fa-flip-horizontal"></i> vence <i class="fa-solid fa-hand fa-flip-horizontal"></i>
+                </p>
+                <p>
+                    <i class="fa-solid fa-hand fa-flip-horizontal"></i> vence <i class="fa-solid fa-hand-back-fist fa-rotate-90"></i>
+                </p>
+                <button id="playGame" onclick="iniciarJogo()">jogar</button>
+            </div>
+        </section>
+        <section id="telaDeJogo">
+            <!-- Contador -->
+            <div id="contador">
+                <fieldset>
+                    <label for="vitorias">Vitórias</label>
+                    <input type="number" name="vitorias" id="vitorias" class="contagem" value="0" readonly>
+                </fieldset>
+                <fieldset>
+                    <label for="empates">Empates</label>
+                    <input type="number" name="empates" id="empates" class="contagem" value="0" readonly>
+                </fieldset>
+                <fieldset>
+                    <label for="derrotas">Derrotas</label>
+                    <input type="number" name="derrotas" id="derrotas" class="contagem" value="0" readonly>
+                </fieldset>
+            </div>
+            <!-- Campo de jogo -->
+            <div id="jogoParado">
+                <img src="img/pedra.png" id="player" alt="Jogador" class="imagemJogo">
+                <img src="img/pedra.png" id="npc" alt="NPC" class="imagemJogo">
+            </div>
+            <div id="jogoAcontecendo">
+                <img src="img/pedra.png" id="imgPlayerMovimento" alt="Jogador" class="imagemJogoMovimento">
+                <img src="img/pedra2.png" id="imgNpcMovimento" alt="NPC" class="imagemJogoMovimento">
+            </div>
+            <div id="jogoResultado">
+                <img src="img/pedra.png" id="playerResultado" alt="Jogador" class="imagemJogoResultado">
+                <img src="img/pedra.png" id="npcResultado" alt="NPC" class="imagemJogoResultado">
+            </div>
+            <div id="escolha">
+                <button id="pedra" class="botaoEscolha" onclick="escolherMao('pedra')"><img src="img/pedra.png" alt="Pedra" width="80"></button>
+                <button id="papel" class="botaoEscolha" onclick="escolherMao('papel')"><img src="img/papel.png" alt="Papel" width="80" ></button>
+                <button id="tesoura" class="botaoEscolha" onclick="escolherMao('tesoura')"><img src="img/tesoura.png" alt="Tesoura" width="80"></button>
+            </div>
+            <div id="reset">
+                <button id="resetar" onclick="reset()">Resetar</button>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Jogo criado por Marcos Willian</p>

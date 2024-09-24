@@ -27,7 +27,6 @@ h1 {
 }
 
 #containerTexto {
-    border: 1px solid red;
     width: 100%;
     margin: 25px auto;
     padding: 20px;
@@ -83,12 +82,11 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: space-around;
-    border: 1px solid red;
     padding: 10px;
 }
 
 fieldset {
-    border: 1px solid orangered;
+    border: none;
 }
 
 label {
@@ -101,6 +99,7 @@ label {
     display: block;
     margin: auto;
     text-align: center;
+    border: none;
     /*animation: piscar 2s ease; */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -109,36 +108,19 @@ label {
     
 }
 
-@keyframes piscar {
-    0% {
-        box-shadow: 0 0 5px gold, 0 0 10px gold;
-    }
-    50% {
-        box-shadow: 0 0 20px gold, 0 0 30px gold;
-    }
-    70% {
-        box-shadow: 0 0 15px gold, 0 0 25px gold; /* Mantém uma sombra mais suave */
-    }
-    100% {
-        box-shadow: none; /* Retorna ao normal */
-    }
-}
-
 /* Campo de jogo */
 
 #jogoParado, #jogoAcontecendo, #jogoResultado {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    border: 1px solid blue;
+    align-items: center;    
     height: 200px;
 }
 
 #jogoAcontecendo {
     display: none;
     justify-content: space-around;
-    align-items: center;
-    border: 1px solid orange;
+    align-items: center;    
     height: 200px;
 }
 
@@ -146,7 +128,6 @@ label {
     display: none;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid limegreen;
     height: 200px;
 }
 
@@ -154,23 +135,18 @@ label {
     width: 100px;
     height: 89px;
     flex-shrink: 2;
-    border: 1px solid aqua;
 }
 
 .imagemJogoMovimento {
     width: 100px;
     height: 89px;
     flex-shrink: 2;
-    border: 1px solid aqua;
-    
 }
 
 .imagemJogoResultado {
     width: 100px;
     height: 89px;
     flex-shrink: 2;
-    border: 1px solid aqua;
-    
 }
 
 #imgPlayerMovimento {
@@ -211,28 +187,25 @@ label {
 #escolha {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    border: 1px solid green;
+    justify-content: space-evenly;    
     padding: 10px;
     
 }
 
 .botaoEscolha {
     width: 90px;
-    border: 1px solid purple;
     border-radius: 5px;
     background-color: white;
 }
 
 .botaoEscolha:active {
-    box-shadow: 0 0 15px purple, 0 0 30px purple;
+    box-shadow: 0 0 15px dodgerblue, 0 0 30px dodgerblue;
 }
 
 /* Botão de reset */
 
 #reset {
     padding: 10px;
-    border: 1px solid violet;
 }
 
 #resetar {
